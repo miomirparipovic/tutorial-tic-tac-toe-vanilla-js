@@ -29,7 +29,7 @@ body {
 .cell {
   width: var(--cell-size);
   height: var(--cell-size);
-  border: 1px solid black;
+  border: 1px solid var(--symbol-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,4 +114,38 @@ body {
   width: calc(var(--symbol-size) * 0.6);
   height: calc(var(--symbol-size) * 0.6);
   background-color: var(--background);
+}
+
+.message-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: var(--background);
+  font-size: 4rem;
+  flex-direction: column;
+}
+
+.message-wrapper.show {
+  display: flex;
+}
+
+.reset-button {
+  font-size: 2rem;
+  background-color: var(--background);
+  border: 1px solid var(--symbol-color);
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  border-radius: 0.3em;
+}
+
+.reset-button:hover {
+  background-color: var(--symbol-color);
+  color: var(--background);
+  border-color: var(--background);
 }
